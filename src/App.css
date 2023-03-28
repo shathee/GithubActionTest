@@ -1,38 +1,130 @@
-.App {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* __________ LOGIN COMPONENT __________  */
+
+body {
+  background: linear-gradient(135deg, rgb(0, 75, 141) 20%, rgb(250, 224, 0) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#loginform {
+  width: 30rem;
+  height: 50rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 3rem;
+  max-width: 100%;
+}
+
+.row input {
+  width: 80%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 1.3rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+  box-shadow: inset 0px -3px 0px 0px rgba(187, 187, 187, 0.4);
+  transition: box-shadow 0.2s ease-in;
+}
+
+.row input:focus {
+  box-shadow: inset 0px -3px 0px 0px rgb(0, 75, 141);
+  outline: none;
+}
+
+.row input::-webkit-input-placeholder {
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out;
+}
+
+.row input:hover::-webkit-input-placeholder,
+.row input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.row label {
+  align-self: start;
+  padding-left: 4.5rem;
+  padding-bottom: 0.5rem;
+  color: rgb(27, 27, 27);
+}
+
+.row button {
+  width: 80%;
+  height: 4rem;
+  font-size: 1.5rem;
   color: white;
+  font-weight: 700;
+  background: rgb(0, 75, 141);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.row button:hover {
+  opacity: 0.8;
+  background: rgb(250, 224, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#metalockIcon {
+  background-image: url('./assets/metalock.svg');
+  background-repeat: no-repeat;
+  background: rgba(51, 170, 51, 0.1);
+  width: 200px;
+  height: 150px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#microsoftIcon {
+  background-image: url('./assets/microsoft_small.png');
+  background-repeat: no-repeat;
+  background: rgba(51, 170, 51, 0.1);
+  width: 150px;
+  height: 150px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#googleIcon {
+  background-image: url('./assets/google_small.png');
+  background-repeat: no-repeat;
+  background: rgba(51, 170, 51, 0.1);
+  width: 150px;
+  height: 150px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#iconGroup {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+#iconGroup a {
+  margin: 0 0.6rem;
+}
+
+#alternativeLogin {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 1.5rem;
 }
