@@ -27,3 +27,8 @@ jobs:
 
       - name: Upload ESLint results
         uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: eslint-results
+          path: |
+            ./eslint-results.xml
